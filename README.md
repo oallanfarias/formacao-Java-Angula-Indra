@@ -6,16 +6,11 @@ ministrado por Leonardo Mattos(larrudam@minsait.com) e Rafael Ferreira (rferreir
 
 **Conteúdo do Treinamento**
 
+- Java
 - Git
-- Lombok 
-- Criando um projeto Spring 
-- Maven 
-- Spring Boot 
 - Api (Rest)
-- Swagger 
-- JPA (Hibernate) 
-- Spring Data 
-- MySQL
+- Web service SOAP
+- Conceitos de View (JSP/JSF)
 
 
 **COMO CONSTRUIR O AMBIENTE**
@@ -33,7 +28,7 @@ Caso não consiga instalar através da interface, copiar o lombok.jar para o dir
 
 	Primeiramente deve-se clonar o repositório no endereço:
 	
-	https://github.com/efmendes/treinamento_202112.git
+	https://github.com/efmendes/treinamento_202201.git
 	
 	
 	
