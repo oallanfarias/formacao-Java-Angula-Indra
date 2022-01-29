@@ -26,6 +26,9 @@ public class Cliente extends GenericEntity<Long>{
 	@Column(length = 50)
 	private String nome;
 	
+	@Column(length = 50)
+	private String sobrenome;
+	
 	@CPF
 	@Column(length = 11)
 	private String cpf;
