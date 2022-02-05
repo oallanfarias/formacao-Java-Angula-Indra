@@ -12,7 +12,7 @@ import com.indracompany.treinamento.model.service.ClienteService;
 import com.indracompany.treinamento.wsbase.ClienteWsModel;
 import com.indracompany.treinamento.wsbase.GetClientePorCpfRequest;
 import com.indracompany.treinamento.wsbase.GetClienteResponse;
-
+import com.indracompany.treinamento.wsbase.GetClientePorNomeRequest;
 
 @Endpoint(value = "/clientes")
 public class CienteSoapWs {
@@ -36,7 +36,20 @@ public class CienteSoapWs {
 		response.setCliente(model);
 		return response;
 	}
-	
+	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getClientePorNomeRequest")
+	@ResponsePayload
+	public GetClienteResponse getClientePorNome(@RequestPayload GetClientePorNomeRequest request) {
+		GetClienteResponse response = new GetClienteResponse();
+		ClienteDTO dto = clienteService.buscarClientePorNome(request.getNome());
+		ClienteWsModel model = new ClienteWsModel();
+		
+		BeanUtils.copyProperties(dto, model);
+		
+
+		response.setCliente(model);
+		return response;
+	}
+		
 	
 
 }
