@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+				  xmlns:gs="http://indracompany.com/treinamento/wsbase">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gs:getClientePorCpfRequest>
+         <gs:cpf>79446873061</gs:cpf>
+      </gs:getClientePorCpfRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
