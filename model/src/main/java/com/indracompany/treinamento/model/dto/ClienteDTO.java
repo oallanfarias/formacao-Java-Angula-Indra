@@ -11,5 +11,7 @@ public class ClienteDTO {
 	
 	private String email;
 	
+	private String cpf;
+	
 
 }
