@@ -48,7 +48,6 @@ public class ClienteService extends GenericCrudService<Cliente, Long, ClienteRep
 		}
 		Cliente c = clienteRepository.findByNome(nome);
 		
-
 		
 		ClienteDTO dto = new ClienteDTO();
 		dto.setEmail(c.getEmail());
