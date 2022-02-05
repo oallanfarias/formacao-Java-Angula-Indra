@@ -11,6 +11,18 @@ public class ClienteDTO {
 	private String nome;
 	
 	private String cpf;
+
+	public void setEmail(Object email) {
+		
+	}
+
+	public void setNomeCompleto(String string) {
+		
+	}
+
+	public void setCpf(Object cpf2) {
+		
+	}
 	
 
 }

@@ -32,7 +32,7 @@ public enum ExceptionValidacoes implements AplicacaoExceptionValidacoes {
   
 
   // Mensagens Alterta
-  ALERTA_NENHUM_REGISTRO_ENCONTRADO("msg.app.alerta.nenhum.registro.encontrado", null, AplicacaoExceptionValidacoes.SEVERIDADE_ALERTA),;
+  ALERTA_NENHUM_REGISTRO_ENCONTRADO("msg.app.alerta.nenhum.registro.encontrado", null, AplicacaoExceptionValidacoes.SEVERIDADE_ALERTA), ERRO_NOME_INVALIDO,;
 
   @Getter
   @Setter

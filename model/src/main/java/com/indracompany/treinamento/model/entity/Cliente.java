@@ -12,13 +12,21 @@ import org.hibernate.validator.constraints.br.CPF;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+@EnableSwagger2
 @Entity
 @Table(name = "clientes")
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class Cliente extends GenericEntity<Long>{
 	
+
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -36,6 +44,23 @@ public class Cliente extends GenericEntity<Long>{
 	private boolean ativo;
 	
 	private String observacoes;
+
+	public Object getEmail() {
+		return ativo;
+		// 
+	}
+
+	public int getNome() {
+		return 0;
+	}
+
+	public Object getCpf() {
+		return null;
+	}
+
+	public int getSobrenome() {
+		return 0;
+	}
 
 	
 }

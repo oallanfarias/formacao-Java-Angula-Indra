@@ -30,6 +30,9 @@
 	</properties>
 
 	<build>
+
+
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -190,5 +193,45 @@
 		</dependency>
 
 	</dependencies>
+	<plugin>
+		<groupId>org.codehaus.mojo</groupId>
+		<artifactId>jaxb2-maven-plugin</artifactId>
+		<version>2.5.0</version>
+		<executions>
+			<execution>
+				<id>xjc</id>
+				<goals>
+					<goal>xjc</goal>
+				</goals>
+			</execution>
+		</executions>
+		<configuration>
+			<sources>
+				<source>${project.basedir}/src/main/resources/cliente.xsd</source>
+			</sources>
+		</configuration>
+	</plugin>
 
+
+	<plugin>
+		<groupId>org.jvnet.jaxb2.maven2</groupId>
+		<artifactId>maven-jaxb2-plugin</artifactId>
+		<version>0.14.0</version>
+		<executions>
+			<execution>
+				<goals>
+					<goal>generate</goal>
+				</goals>
+			</execution>
+		</executions>
+		<configuration>
+			<schemaLanguage>WSDL</schemaLanguage>
+			<generatePackage>com.indracompany.treinamento.wsdl</generatePackage>
+			<schemas>
+				<schema>
+					<url>http://localhost:8080/treinamento/ws/clientes.wsdl</url>
+				</schema>
+			</schemas>
+		</configuration>
+	</plugin>
 </project>
