@@ -1,6 +1,5 @@
 package com.indracompany.treinamento.model.service;
 
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,39 +31,20 @@ public class ClienteService extends GenericCrudService<Cliente, Long, ClienteRep
 		ClienteDTO dto = new ClienteDTO();
 		dto.setEmail(c.getEmail());
 		dto.setNomeCompleto(c.getNome() +" " +c.getSobrenome());
-		dto.setCpf(c.getCpf());
-		return dto;
-		
-	}
-
-
-
-	public ClienteDTO buscarClientePorNome(String nome) {
-		
-		boolean nomeValido = ehNomeValido(nome);
-		
-		if (!nomeValido) {
-			throw new AplicacaoException(ExceptionValidacoes.ERRO_NOME_INVALIDO);
-		}
-		Cliente c = clienteRepository.findByNome(nome);
-		
-
-		
-		ClienteDTO dto = new ClienteDTO();
-		dto.setEmail(c.getEmail());
-		dto.setNomeCompleto(c.getNome() +" " +c.getSobrenome());
-		dto.setCpf(c.getCpf());
 		return dto;
 		
 	}
 	
-	private boolean ehNomeValido(String nome) {
-		if (StringUtils.isNotBlank(nome) 
-				&& !StringUtils.isNumeric(nome)
-				&& nome.length() >= 2) {
-			return true;
-		}
-		return false;
+	
+	public ClienteDTO buscarClientePorNome(String nome) {
+		Cliente d = clienteRepository.findByNome(nome);
+		
+		ClienteDTO dto = new ClienteDTO();
+		dto.setEmail(d.getEmail());
+		dto.setNomeCompleto(d.getNome() +" " +d.getSobrenome());
+		return dto;
+		
+
 	}
 
 	  
