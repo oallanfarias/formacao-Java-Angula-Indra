@@ -51,6 +51,7 @@ public class CienteSoapWs {
 		
 
 		response.setCliente(model);
+		
 		return response;
 	}
 	
