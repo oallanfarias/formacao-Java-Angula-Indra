@@ -46,6 +46,7 @@ public class CienteSoapWs {
 		ClienteDTO dto = clienteService.buscarClientePorNome(request.getNome());
 		ClienteWsModel model = new ClienteWsModel();
 		
+		
 		BeanUtils.copyProperties(dto, model);
 		
 
