@@ -21,6 +21,4 @@ public class GetClientePorCpfRequest {
 
     @XmlElement(required = true)
     private String cpf;
-
-
 }
