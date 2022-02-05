@@ -33,7 +33,6 @@ public class CienteSoapWs {
 		
 		BeanUtils.copyProperties(dto, model);
 		
-
 		response.setCliente(model);
 		return response;
 	}
