@@ -41,9 +41,9 @@ public class ClienteService extends GenericCrudService<Cliente, Long, ClienteRep
 
 	public ClienteDTO buscarClientePorNome(String nome) {
 		
-		boolean nomeValido = ehNomeValido(nome);
+		boolean nomeValido1 = ehNomeValido(nome);
 		
-		if (!nomeValido) {
+		if (!nomeValido1) {
 			throw new AplicacaoException(ExceptionValidacoes.ERRO_NOME_INVALIDO);
 		}
 		Cliente c = clienteRepository.findByNome(nome);
