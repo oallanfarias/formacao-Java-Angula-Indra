@@ -9,7 +9,7 @@
 
 
 
-List<Cliente> listaCliente = (List) session.getAttribute("lista");
+List<Cliente> lista = (List) session.getAttribute("lista");
 
 %>
 <html lang="en">
@@ -40,7 +40,7 @@ List<Cliente> listaCliente = (List) session.getAttribute("lista");
 			</tr>
 			<%
 				
-				for (Cliente cliente: listaCliente){
+				for (Cliente cliente: lista){
 				
 				%>
 			<tr align="center">
