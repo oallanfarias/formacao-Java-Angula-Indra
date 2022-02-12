@@ -32,7 +32,6 @@ public class ClienteService extends GenericCrudService<Cliente, Long, ClienteRep
 		ClienteDTO dto = new ClienteDTO();
 		dto.setEmail(c.getEmail());
 		dto.setNomeCompleto(c.getNome() +" " +c.getSobrenome());
-		dto.setCpf(c.getCpf());
 		return dto;
 		
 	}
@@ -48,12 +47,9 @@ public class ClienteService extends GenericCrudService<Cliente, Long, ClienteRep
 		}
 		Cliente c = clienteRepository.findByNome(nome);
 		
-
-		
 		ClienteDTO dto = new ClienteDTO();
 		dto.setEmail(c.getEmail());
 		dto.setNomeCompleto(c.getNome() +" " +c.getSobrenome());
-		dto.setCpf(c.getCpf());
 		return dto;
 		
 	}

@@ -8,7 +8,7 @@ public interface ClienteRepository extends GenericCrudRepository<Cliente, Long>{
 	
 	public Cliente findByCpf(@Param("cpf")String cpf);
 	
-	public Cliente findBynome(@Param("nome")String nome);
+	public Cliente findByNome(@Param("nome")String nome);
 
 	
 
