@@ -11,7 +11,6 @@ import com.indracompany.treinamento.model.dto.ClienteDTO;
 import com.indracompany.treinamento.model.service.ClienteService;
 import com.indracompany.treinamento.wsbase.ClienteWsModel;
 import com.indracompany.treinamento.wsbase.GetClientePorCpfRequest;
-import com.indracompany.treinamento.wsbase.GetClientePorNomeRequest;
 import com.indracompany.treinamento.wsbase.GetClienteResponse;
 
 
@@ -38,6 +37,7 @@ public class CienteSoapWs {
 		return response;
 	}
 
+<<<<<<< HEAD
 	
 	
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getClientePorNomeRequest")
@@ -80,5 +80,7 @@ public class CienteSoapWs {
 			return response;
 		
 		}
+=======
+>>>>>>> 23caac625b149cfed0b8c7fece7c7daa79670b65
 		
 }
