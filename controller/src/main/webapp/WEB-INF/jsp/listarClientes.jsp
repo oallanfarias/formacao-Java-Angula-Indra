@@ -40,7 +40,7 @@ List<Cliente> listaCliente = (List) session.getAttribute("lista");
 			</tr>
 			<%
 				
-				for (Cliente cliente: lista){
+				for (Cliente cliente: listaCliente){
 				
 				%>
 			<tr align="center">
