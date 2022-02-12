@@ -1,5 +1,7 @@
 package com.indracompany.treinamento.model.service;
 
+import java.util.List;
+
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,6 +37,11 @@ public class ClienteService extends GenericCrudService<Cliente, Long, ClienteRep
 		dto.setCpf(c.getCpf());
 		return dto;
 		
+	}
+	
+	public List<Cliente> listar(){
+		
+		return clienteRepository.findAll();
 	}
 
 
