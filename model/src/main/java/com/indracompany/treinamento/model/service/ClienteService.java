@@ -1,6 +1,5 @@
 package com.indracompany.treinamento.model.service;
 
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +31,7 @@ public class ClienteService extends GenericCrudService<Cliente, Long, ClienteRep
 		ClienteDTO dto = new ClienteDTO();
 		dto.setEmail(c.getEmail());
 		dto.setNomeCompleto(c.getNome() +" " +c.getSobrenome());
+<<<<<<< HEAD
 		dto.setCpf(c.getCpf());
 		return dto;
 		
@@ -53,18 +53,37 @@ public class ClienteService extends GenericCrudService<Cliente, Long, ClienteRep
 		dto.setEmail(c.getEmail());
 		dto.setNomeCompleto(c.getNome() +" " +c.getSobrenome());
 		dto.setCpf(c.getCpf());
+=======
+>>>>>>> 23caac625b149cfed0b8c7fece7c7daa79670b65
 		return dto;
 		
 	}
 	
-	private boolean ehNomeValido(String nome) {
-		if (StringUtils.isNotBlank(nome) 
-				&& !StringUtils.isNumeric(nome)
-				&& nome.length() >= 2) {
-			return true;
-		}
-		return false;
+<<<<<<< HEAD
+      public ClienteDTO buscarClientePornome(String nome) {
+   		
+    	Cliente c = clienteRepository.findBynome(nome);
+		
+		ClienteDTO dto = new ClienteDTO();
+		dto.setEmail(c.getEmail());
+		dto.setNomeCompleto(c.getNome() +" " +c.getSobrenome());
+		return dto;
+		
 	}
+
+=======
+	
+	public ClienteDTO buscarClientePorNome(String nome) {
+		Cliente d = clienteRepository.findByNome(nome);
+		
+		ClienteDTO dto = new ClienteDTO();
+		dto.setEmail(d.getEmail());
+		dto.setNomeCompleto(d.getNome() +" " +d.getSobrenome());
+		return dto;
+		
+
+	}
+>>>>>>> 109289f0f51111b3d3966fdaab2120a358aad652
 
 	  
 }
