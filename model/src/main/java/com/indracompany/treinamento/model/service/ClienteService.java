@@ -37,6 +37,19 @@ public class ClienteService extends GenericCrudService<Cliente, Long, ClienteRep
 		
 	}
 	
+<<<<<<< HEAD
+      public ClienteDTO buscarClientePornome(String nome) {
+   		
+    	Cliente c = clienteRepository.findBynome(nome);
+		
+		ClienteDTO dto = new ClienteDTO();
+		dto.setEmail(c.getEmail());
+		dto.setNomeCompleto(c.getNome() +" " +c.getSobrenome());
+		return dto;
+		
+	}
+
+=======
 	
 	public ClienteDTO buscarClientePorNome(String nome) {
 		Cliente d = clienteRepository.findByNome(nome);
@@ -48,6 +61,7 @@ public class ClienteService extends GenericCrudService<Cliente, Long, ClienteRep
 		
 
 	}
+>>>>>>> 109289f0f51111b3d3966fdaab2120a358aad652
 
 
 

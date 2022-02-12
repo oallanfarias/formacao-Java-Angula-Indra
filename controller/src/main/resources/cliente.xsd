@@ -9,14 +9,22 @@
         </xs:complexType>
     </xs:element>
     
+<<<<<<< HEAD
     <xs:element name="getClientePorNomeRequest">
+=======
+    <xs:element name="getClientePorNomefRequest">
+>>>>>>> 576b62c979ec27d478f5770960794a490ad69eb8
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="nome" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+<<<<<<< HEAD
    
+=======
+    
+>>>>>>> 576b62c979ec27d478f5770960794a490ad69eb8
 
     <xs:element name="getClienteResponse">
         <xs:complexType>

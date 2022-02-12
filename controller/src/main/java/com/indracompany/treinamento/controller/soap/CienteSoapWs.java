@@ -65,5 +65,20 @@ public class CienteSoapWs {
 	}
 >>>>>>> 109289f0f51111b3d3966fdaab2120a358aad652
 	
+		@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getClientePorNomeRequest")
+		@ResponsePayload
+		public GetClienteResponse getClientePorNome(@RequestPayload GetClientePorNomeRequest request) {
+			GetClienteResponse response = new GetClienteResponse();
+			
+			ClienteDTO dto = clienteService.buscarClientePornome(request.getNome());
+			ClienteWsModel model = new ClienteWsModel();
+			
+			BeanUtils.copyProperties(dto, model);
+			
 
+			response.setCliente(model);
+			return response;
+		
+		}
+		
 }
