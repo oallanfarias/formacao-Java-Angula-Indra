@@ -9,16 +9,19 @@ import javax.xml.bind.annotation.XmlType;
 import lombok.Getter;
 import lombok.Setter;
 
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "nome"
 
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "", propOrder = {
+    "nome"
+		
 })
 @Getter
 @Setter
 @XmlRootElement(name = "getClientePorNomeRequest")
-	public class GetClientePorNomeRequest {
+public class GetClientePorNomeRequest {
 
-	@XmlElement(required = true)
-	private String nome;
+    @XmlElement(required = true)
+    private String nome;
+
 
 }

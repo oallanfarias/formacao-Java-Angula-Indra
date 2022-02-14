@@ -37,6 +37,10 @@ public class CienteSoapWs {
 		response.setCliente(model);
 		return response;
 	}
+
+	
+	
+
 	
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getClientePorNomeRequest")
 	@ResponsePayload
@@ -45,14 +49,14 @@ public class CienteSoapWs {
 		
 		ClienteDTO dto = clienteService.buscarClientePorNome(request.getNome());
 		ClienteWsModel model = new ClienteWsModel();
-
+		
 		BeanUtils.copyProperties(dto, model);
 		
 
 		response.setCliente(model);
+		
 		return response;
 	}
-	
 	
 
 }

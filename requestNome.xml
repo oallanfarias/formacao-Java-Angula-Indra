@@ -7,7 +7,7 @@
          <gs:nome>Glaucus</gs:nome>
 =======
          <gs:nome>Vanessa Joana da Silva</gs:nome>
->>>>>>> 3d73782165ec8ee9e3bc621976e1129b7b95eed5
+>>>>>>> 109289f0f51111b3d3966fdaab2120a358aad652
       </gs:getClientePorNomeRequest>
    </soapenv:Body>
 </soapenv:Envelope>
