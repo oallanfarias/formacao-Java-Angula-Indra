@@ -9,6 +9,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 import com.indracompany.treinamento.model.dto.ClienteDTO;
 import com.indracompany.treinamento.model.service.ClienteService;
+
 import com.indracompany.treinamento.wsbase.ClienteWsModel;
 import com.indracompany.treinamento.wsbase.GetClientePorCpfRequest;
 import com.indracompany.treinamento.wsbase.GetClientePorNomeRequest;
@@ -24,6 +25,7 @@ public class CienteSoapWs {
 	private ClienteService clienteService;
 
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getClientePorCpfRequest")
+	
 	@ResponsePayload
 	public GetClienteResponse getClientePorCpf(@RequestPayload GetClientePorCpfRequest request) {
 		GetClienteResponse response = new GetClienteResponse();
@@ -45,7 +47,7 @@ public class CienteSoapWs {
 	@ResponsePayload
 	public GetClienteResponse getClientePorNome(@RequestPayload GetClientePorNomeRequest request) {
 		GetClienteResponse response = new GetClienteResponse();
-
+		System.out.println(request.getNome());
 		System.out.println(request.getNome());
 
 		ClienteDTO dto = clienteService.buscarClientePorNome(request.getNome());

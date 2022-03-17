@@ -3,11 +3,7 @@
    <soapenv:Header/>
    <soapenv:Body>
       <gs:getClientePorNomeRequest>
-<<<<<<< HEAD
          <gs:nome>Glaucus</gs:nome>
-=======
-         <gs:nome>Vanessa Joana da Silva</gs:nome>
->>>>>>> 109289f0f51111b3d3966fdaab2120a358aad652
       </gs:getClientePorNomeRequest>
    </soapenv:Body>
 </soapenv:Envelope>

@@ -12,6 +12,7 @@ import org.hibernate.validator.constraints.br.CPF;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 
 @Entity
 @Table(name = "clientes")
@@ -37,6 +38,9 @@ public class Cliente extends GenericEntity<Long>{
 	private String email;
 	
 	private boolean ativo;
+	
+	@Getter
+	private String possuiConta;
 	
 	private String observacoes;
 

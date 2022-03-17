@@ -31,6 +31,7 @@ public enum ExceptionValidacoes implements AplicacaoExceptionValidacoes {
   ERRO_NOME_INVALIDO("msg.erro.nome.invalido", null, AplicacaoExceptionValidacoes.SEVERIDADE_ERRO),
   
   
+  
 
   // Mensagens Alterta
   ALERTA_NENHUM_REGISTRO_ENCONTRADO("msg.app.alerta.nenhum.registro.encontrado", null, AplicacaoExceptionValidacoes.SEVERIDADE_ALERTA),;
