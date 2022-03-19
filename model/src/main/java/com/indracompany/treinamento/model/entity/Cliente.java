@@ -27,7 +27,7 @@ public class Cliente extends GenericEntity<Long>{
 	private String nome;
 	
 	@CPF
-	@Column(length = 11)
+	@Column(length = 11, unique = true)
 	private String cpf;
 	
 	@Email
