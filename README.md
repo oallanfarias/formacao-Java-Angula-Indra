@@ -1,8 +1,6 @@
 **SOBRE O QUE É O PROJETO?**
 ========================================================================
-O objetivo do projeto é servir de base para o treinamento de "Formação Java/Angular para Jovens Profissionais", da Indra, unidade de João Pessoa, 
-ministrado por Leonardo Mattos(larrudam@minsait.com) e Rafael Ferreira (rferreiraa@indracompany.com)
-
+O objetivo do projeto é servir de base para o treinamento de "Formação Java/Angular para Jovens Profissionais", da Indra, unidade de João Pessoa
 
 **Conteúdo do Treinamento**
 
