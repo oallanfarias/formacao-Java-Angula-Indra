@@ -3,6 +3,8 @@ package com.indracompany.treinamento.model.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.websocket.ClientEndpoint;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,7 @@ import com.indracompany.treinamento.util.CpfUtil;
 @Service
 public class ClienteService extends GenericCrudService<Cliente, Long, ClienteRepository>{
 
+	
 	  public List<ClienteDTO> buscarClientePorCpf(String cpf) {
 		  boolean cpfValido = cpf != null && CpfUtil.validaCPF(cpf);
 		  
