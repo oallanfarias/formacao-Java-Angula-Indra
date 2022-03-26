@@ -26,8 +26,8 @@ public class ClienteRest extends GenericCrudRest<Cliente, Long, ClienteService>{
 	
 	
 	@GetMapping(value = "/buscarPorCpf/{cpf}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public @ResponseBody ResponseEntity<List<ClienteDTO>> buscarClientePorCpf(@PathVariable String cpf) {
-		List<ClienteDTO> dto = clienteService.buscarClientePorCpf(cpf);
+	public @ResponseBody ResponseEntity<ClienteDTO> buscarClientePorCpf(@PathVariable String cpf) {
+		ClienteDTO dto = clienteService.buscarClientePorCpf(cpf);
 		
 		if (dto == null) {
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
