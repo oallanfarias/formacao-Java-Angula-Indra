@@ -8,5 +8,8 @@ import com.indracompany.treinamento.model.entity.ContaBancaria;
 public interface ContaBancariaRepository extends GenericCrudRepository<ContaBancaria, Long>{
 	
 	List<ContaBancaria> findByCliente(Cliente cli);
+	
+	ContaBancaria findByAgenciaAndNumero(String agencia, String numero);
+	
 
 }
