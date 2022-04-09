@@ -62,8 +62,8 @@ Como acessar o client do MySQL:
 	
 JDBC URL: jdbc:mysql://31.220.109.68:3306/treinamentoindra
 
-Usuário: treinamentoindra
+Usuário: 
 
-Senha: treinamentoindra
+Senha: 
 
 PhpMyAdmin: http://31.220.109.68/phpmyadmin/
